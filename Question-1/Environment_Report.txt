@@ -1,0 +1,121 @@
+Command:
+
+whoami
+
+
+
+Output:
+
+root
+
+
+
+Observation:
+
+I used the whoami command to display the username of the currently logged-in account. The output shows that the current user is root.
+
+
+
+**Second Command :** 
+
+
+Command:
+
+groups
+
+
+
+Output:
+
+root
+
+
+
+Observation:
+
+The groups command displays all groups associated with the current user. Since I am logged in as root, the user belongs to the root group.
+
+
+**Third Command :**
+Command:
+
+echo $SHELL
+
+
+
+Output:
+
+/bin/bash
+
+
+
+Observation:
+
+This command displays the default shell currently being used. The shell is Bash, which interprets and executes Linux commands.
+
+Command:
+
+pwd
+
+
+
+Output:
+
+/root/Linux-Graded-Lab/Question1
+
+
+
+Observation:
+
+The pwd command displays the current working directory. It confirms that I am working inside the Question1 folder.
+
+Command:
+
+ls -la
+
+
+
+Output:
+
+total 8
+
+drwxr-xr-x 2 root root 4096 Jul 3 13:41 .
+
+drwxr-xr-x 3 root root 4096 Jul 3 13:41 ..
+
+
+
+Observation:
+
+The ls -la command lists all files and directories, including hidden files. It also shows permissions, ownership, and file details.
+
+Command:
+
+ping -c 4 google.com
+
+
+
+Output:
+
+PING google.com (142.251.12.100) 56(84) bytes of data.
+
+64 bytes from se-in-f100.1e100.net (142.251.12.100): icmp\_seq=1 ttl=101 time=1.55 ms
+
+64 bytes from se-in-f100.1e100.net (142.251.12.100): icmp\_seq=2 ttl=101 time=1.69 ms
+
+64 bytes from se-in-f100.1e100.net (142.251.12.100): icmp\_seq=3 ttl=101 time=1.71 ms
+
+64 bytes from se-in-f100.1e100.net (142.251.12.100): icmp\_seq=4 ttl=101 time=1.62 ms
+
+
+
+\--- google.com ping statistics
+
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+
+rtt min/avg/max/mdev = 1.550/1.645/1.714/0.064 ms
+
+Observation:
+
+The ping command checks network connectivity by sending packets to Google's server. Successful replies indicate that the system has internet connectivity.
+

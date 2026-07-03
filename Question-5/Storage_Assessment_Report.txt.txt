@@ -1,0 +1,68 @@
+Question 5: Storage Health Assessment and Documentation
+
+============================================================
+
+1. Available Storage Devices
+
+Command:
+lsblk
+
+Observation:
+The lsblk command displayed all available storage devices, partitions, and their sizes. It provides an overview of the storage devices connected to the system.
+
+============================================================
+
+2. Mounted File Systems
+
+Command:
+df -h
+
+Observation:
+The df -h command displayed all mounted file systems with total space, used space, available space, and mount points in a human-readable format.
+
+============================================================
+
+3. Disk Usage Statistics
+
+Command:
+du -sh .
+
+Observation:
+The du -sh command displayed the total disk space used by the current directory.
+
+============================================================
+
+4. Inode Utilization
+
+Command:
+df -i
+
+Observation:
+The df -i command displayed inode usage for all mounted file systems. It helps determine whether the system is running out of available inodes.
+
+============================================================
+
+Storage Health Observations
+
+• Storage devices were detected successfully.
+• Mounted file systems were functioning normally.
+• Disk usage was within acceptable limits.
+• Inode utilization indicated sufficient free inodes.
+• No storage-related issues were observed during the assessment.
+
+============================================================
+
+Recommendations for Improving Storage Utilization
+
+• Regularly remove unnecessary files.
+• Compress or archive old log files.
+• Monitor disk usage periodically.
+• Delete unused temporary files.
+• Monitor inode usage to avoid inode exhaustion.
+• Use separate partitions for application data when required.
+
+============================================================
+
+Conclusion
+
+The storage assessment showed that the storage devices, mounted file systems, disk usage, and inode utilization were functioning normally. Regular monitoring and cleanup can help maintain optimal storage performance and prevent storage-related issues.

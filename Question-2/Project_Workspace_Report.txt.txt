@@ -1,0 +1,88 @@
+Question 2: Secure Project Workspace Setup
+
+------------------------------------------------------------
+Command:
+mkdir -p ProjectWorkspace/docs ProjectWorkspace/src ProjectWorkspace/logs
+
+Output:
+ProjectWorkspace directory created successfully with three subdirectories: docs, src, and logs.
+
+Observation:
+I created a project workspace with separate directories for documentation, source code, and log files. This structure helps organize project resources efficiently.
+
+------------------------------------------------------------
+Command:
+ls -R ProjectWorkspace
+
+Output:
+ProjectWorkspace:
+docs  logs  src
+
+ProjectWorkspace/docs:
+
+ProjectWorkspace/logs:
+
+ProjectWorkspace/src:
+
+Observation:
+The command displayed the directory structure of the workspace. It confirmed that all required subdirectories were created successfully.
+
+------------------------------------------------------------
+Command:
+ls -ld ProjectWorkspace ProjectWorkspace/*
+
+Output:
+drwxr-xr-x 5 root root ... ProjectWorkspace
+drwxr-xr-x 2 root root ... ProjectWorkspace/docs
+drwxr-xr-x 2 root root ... ProjectWorkspace/logs
+drwxr-xr-x 2 root root ... ProjectWorkspace/src
+
+Observation:
+The command displayed the permissions, ownership, and other details of the project workspace and its subdirectories. The default permissions were assigned according to the system umask.
+
+------------------------------------------------------------
+Command:
+chmod 750 ProjectWorkspace
+
+Output:
+(No output)
+
+Observation:
+The permissions of the ProjectWorkspace directory were changed to 750. This allows the owner full access, the group read and execute access, and denies access to others.
+
+------------------------------------------------------------
+Command:
+ls -ld ProjectWorkspace
+
+Output:
+drwxr-x--- 5 root root ... ProjectWorkspace
+
+Observation:
+The updated permissions were verified successfully. The owner and group information were also displayed.
+
+------------------------------------------------------------
+Command:
+umask
+
+Output:
+0022
+
+Observation:
+The umask value determines the default permissions for newly created files and directories. A value of 0022 removes write permission for the group and others by default.
+
+------------------------------------------------------------
+Ownership Details
+
+Owner: root
+
+Group: root
+
+------------------------------------------------------------
+Explanation of How Permissions Protect Project Data
+
+Linux file permissions help secure project data by controlling who can read, write, or execute files and directories. Setting the ProjectWorkspace directory to permission 750 ensures that only the owner has full control, group members have limited access, and other users cannot access the project. This protects sensitive project files from unauthorized access while still allowing controlled collaboration.
+
+------------------------------------------------------------
+Conclusion
+
+A secure project workspace was created successfully. The directory structure, ownership details, permissions, and umask value were verified. Appropriate permissions were applied to improve the security and protection of project files.
